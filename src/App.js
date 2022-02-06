@@ -18,8 +18,11 @@ const App = () => {
 
   useEffect(() => {
     setCubicles(cubicles);
+  }, [cubicles])
+
+  useEffect(() => {
     setFloor(floor);
-  }, [cubicles], [floor])
+  }, [floor])
 
   return (
     <>
@@ -35,13 +38,13 @@ const App = () => {
         </ResizableContent>
       ))}
 
-      <ResizableContent top={600} left={0} width={100} height={100}>
+      {/* <ResizableContent top={600} left={0} width={100} height={100}>
       <div className="outer content content1">
         <div className="inner">
           <img src="http://placehold.it/500x500" alt="" />
         </div>
       </div>
-      </ResizableContent>
+      </ResizableContent> */}
     </>
   )
 }
